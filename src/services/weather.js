@@ -4,7 +4,7 @@ import axios from "axios"
 const API_KEY = process.env.REACT_APP_API_KEY
 
 const geoCoding = async (cityName) => {
-    const geocodingLink = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
+    const geocodingLink = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
     const request = await axios.get(geocodingLink)
     return request.data
 }
